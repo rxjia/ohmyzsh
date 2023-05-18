@@ -84,9 +84,9 @@ Oh My Zsh is installed by running one of the following commands in your terminal
 
 | Method    | Command                                                                                           |
 | :-------- | :------------------------------------------------------------------------------------------------ |
-| **curl**  | `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"` |
-| **wget**  | `sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`   |
-| **fetch** | `sh -c "$(fetch -o - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"` |
+| **curl**  | `sh -c "$(curl -fsSL https://raw.githubusercontent.com/rxjia/ohmyzsh/rsdev/tools/install.sh)"` |
+| **wget**  | `sh -c "$(wget -O- https://raw.githubusercontent.com/rxjia/ohmyzsh/rsdev/tools/install.sh)"`   |
+| **fetch** | `sh -c "$(fetch -o - https://raw.githubusercontent.com/rxjia/ohmyzsh/rsdev/tools/install.sh)"` |
 
 _Note that any previous `.zshrc` will be renamed to `.zshrc.pre-oh-my-zsh`. After installation, you can move the configuration you want to preserve into the new `.zshrc`._
 
@@ -97,7 +97,7 @@ that by downloading the install script first, looking through it so everything l
 then running it:
 
 ```sh
-wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+wget https://raw.githubusercontent.com/rxjia/ohmyzsh/rsdev/tools/install.sh
 sh install.sh
 ```
 
@@ -217,14 +217,14 @@ flag to the `install.sh` script. This will have the effect of not trying to chan
 the default shell, and it also won't run `zsh` when the installation has finished.
 
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/rxjia/ohmyzsh/rsdev/tools/install.sh)" "" --unattended
 ```
 
 #### Installing From A Forked Repository
 
 The install script also accepts these variables to allow installation of a different repository:
 
-- `REPO` (default: `ohmyzsh/ohmyzsh`): this takes the form of `owner/repository`. If you set
+- `REPO` (default: `rxjia/ohmyzsh`): this takes the form of `owner/repository`. If you set
   this variable, the installer will look for a repository at `https://github.com/{owner}/{repository}`.
 
 - `REMOTE` (default: `https://github.com/${REPO}.git`): this is the full URL of the git repository
@@ -248,7 +248,7 @@ REPO=apjanke/oh-my-zsh BRANCH=edge sh install.sh
 ##### 1. Clone The Repository <!-- omit in toc -->
 
 ```sh
-git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+git clone https://github.com/rxjia/ohmyzsh.git ~/.oh-my-zsh
 ```
 
 ##### 2. _Optionally_, Backup Your Existing `~/.zshrc` File <!-- omit in toc -->

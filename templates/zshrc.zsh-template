@@ -24,7 +24,7 @@ ZSH_THEME="robbyrussell"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
+zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
@@ -70,11 +70,17 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git pip docker zsh-autosuggestions zsh-syntax-highlighting conda-zsh-completion)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
+# for conda-zsh-completion -----
+autoload -U compinit && compinit
+
+# zsh no_nomatch -----
+setopt no_nomatch
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

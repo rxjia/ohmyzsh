@@ -67,9 +67,9 @@ zdot="${ZDOTDIR:-$HOME}"
 ZSH="${ZSH:-$HOME/.oh-my-zsh}"
 
 # Default settings
-REPO=${REPO:-ohmyzsh/ohmyzsh}
+REPO=${REPO:-rxjia/ohmyzsh}
 REMOTE=${REMOTE:-https://github.com/${REPO}.git}
-BRANCH=${BRANCH:-master}
+BRANCH=${BRANCH:-rsdev}
 
 # Other options
 CHSH=${CHSH:-yes}
@@ -312,6 +312,10 @@ setup_ohmyzsh() {
       rm -rf "$ZSH" 2>/dev/null
     }
     fmt_error "git clone of oh-my-zsh repo failed"
+    exit 1
+  } \
+  && git submodule update --init --recursive --depth=1 || {
+    fmt_error "git submodule update --init --recursive failed"
     exit 1
   }
   # Exit installation directory
